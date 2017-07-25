@@ -1,11 +1,12 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
+MAINTAINER Matt Outten <matt@outten.net>
 
 # Install Supporting Packages
 RUN apt-get -q update && \
-  apt-get install -qy --force-yes curl python && \
-  curl -sL https://deb.nodesource.com/setup | sudo bash - && \
+  apt-get install -qy curl python && \
+  curl -sL https://deb.nodesource.com/setup_4.x | bash - && \
   apt-get -q update && \
-  apt-get install -qy --force-yes \
+  apt-get install -qy \
     build-essential \
     git \
     nodejs \
