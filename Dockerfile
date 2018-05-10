@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-MAINTAINER Matt Outten <matt@outten.net>
+LABEL maintainer="Matt Outten <matt@outten.net>"
 
 # Install Supporting Packages
 RUN apt-get -q update && \
